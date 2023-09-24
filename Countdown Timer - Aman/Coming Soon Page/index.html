@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer | Aman Singh</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3003/3003202.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJUes-2O0z0ZJ8xRBrbIxCu1x_VLU4-AT9LK6BSt2CSPmJHTdgTajclgQMW9OjsXocIhZYvscLtMy3J2dO6e6DIiXH-CqjFUtey0EVwf9ql_6sz2aPrpEwo0aEQFnH5TLwJrKIIzg87N_P9b1rHqI7t1ZJw9FBiLz6iJSitdnSQ66h-kN_2wlRpnKhZiw/s16000/Count__1_-removebg-preview.png" class="logo">
+        <div class="content">
+            <p>Website is Under Maintenace</p>
+            <h1>We'r <span>Lanching</span> SooN</h1>
+            <div class="lanch-time">
+                <div>
+                    <p id="days">00</p>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <span>Seconds</span>
+                </div>
+            </div>
+            <a  href="mailto:itsamanable@gmail.com">More Details</a>
+        </div>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicee1QfZkxrg_ro-9paWU8p686pD4xhjWN0Xu25rZPjIciM6eFn2ZUrig9E2fB5rIeWJvNmS_1xoRZQtTkH_edW9Q-SbiVZo6BAEJvv8kvac-OdIXlorHdC-RW5hFTscjbc-ARH2ercLsmcKxLlHGcqBX2_x164SbCB0wZXnNEJhuJLIxLTUDfSo6_d2E/s16000/rocket.png" alt="" class="rocket">
+    </div>
+    
+    <script>
+
+        var countDownDate = new Date("oct 30, 2023 00:00:00").getTime();
+        var x = setInterval(function(){
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+        },1000);
+
+    </script>
+
+</body>
+</html>
